@@ -1,4 +1,68 @@
+:root {
+  --main-text-color: #787a80;
+  --text-title-color: #1e212c;
+  --text-secondary-color: #424551;
+}
+
 /* general styles */
+
 body {
   font-family: 'Ubuntu', sans-serif;
+  color: var(--main-text-color);
+}
+
+/* reset styles */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+}
+
+/* header */
+
+.nav-list {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(160 / 100);
+}
+
+.nav-link {
+  color: var(--text-secondary-color);
+}
+
+.contacts {
+  line-height: calc(150 / 100);
+}
+
+.contact-link {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-title-color);
+}
+
+.contact-text {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-secondary-color);
 }
