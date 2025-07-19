@@ -18,6 +18,11 @@ body {
   padding: 0 15px;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 /* reset styles */
 
 p,
@@ -48,7 +53,26 @@ button {
 
 /* header */
 
+.grid-col {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.header {
+  column-gap: 172px;
+  padding-top: 22px;
+  padding-bottom: 23px;
+}
+
+.nav {
+  column-gap: 60px;
+  align-content: center;
+}
+
 .nav-list {
+  column-gap: 40px;
+  justify-content: center;
+  align-content: center;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(160 / 100);
@@ -60,6 +84,17 @@ button {
 
 .contacts {
   line-height: calc(150 / 100);
+}
+
+.contacts-list {
+  column-gap: 36px;
+}
+
+.contacts-item {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 12px;
+  align-items: center;
 }
 
 .contact-link {
