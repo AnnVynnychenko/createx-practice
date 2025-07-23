@@ -2,6 +2,9 @@
   --main-text-color: #787a80;
   --text-title-color: #1e212c;
   --text-secondary-color: #424551;
+  --accent-color: #ff5a30;
+  --transition-duration: 250ms;
+  --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* general styles */
@@ -60,13 +63,17 @@ button {
 
 .header {
   column-gap: 172px;
-  padding-top: 22px;
-  padding-bottom: 23px;
+}
+
+.logo-link {
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .nav {
   column-gap: 60px;
   align-content: center;
+  align-items: center;
 }
 
 .nav-list {
@@ -79,32 +86,63 @@ button {
 }
 
 .nav-link {
+  padding-top: 37px;
+  padding-bottom: 37px;
   color: var(--text-secondary-color);
+  transition: color var(--transition-duration) var(--transition-function);
 }
 
-.contacts {
-  line-height: calc(150 / 100);
+.nav-link:is(:hover, :focus) {
+  color: var(--accent-color);
 }
 
 .contacts-list {
   column-gap: 36px;
 }
 
-.contacts-item {
+.contact-link {
   display: grid;
   grid-template-columns: repeat(2, auto);
   column-gap: 12px;
   align-items: center;
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 
-.contact-link {
+.contact-link:is(:hover, :focus) .contact-info {
+  color: var(--accent-color);
+}
+
+.contact-info {
   font-weight: 400;
   font-size: 18px;
   color: var(--text-title-color);
+  transition: color var(--transition-duration) var(--transition-function);
 }
 
 .contact-text {
+  margin-bottom: 2px;
   font-weight: 700;
   font-size: 14px;
   color: var(--text-secondary-color);
+}
+
+/* hero */
+
+.hero {
+  max-width: 1920px;
+  padding-top: 219px;
+  padding-bottom: 121px;
+  background-image: linear-gradient(
+      rgba(30, 33, 44, 0.6),
+      rgba(30, 33, 44, 0.6)
+    ),
+    url(../image/hero/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-title {
+  color: #ffffff;
 }
