@@ -3,6 +3,9 @@
   --text-title-color: #1e212c;
   --text-secondary-color: #424551;
   --accent-color: #ff5a30;
+  --active-color: #fc3300;
+  --bg-color: #2e2f42;
+  --white: #ffffff;
   --transition-duration: 250ms;
   --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -131,8 +134,9 @@ button {
 
 .hero {
   max-width: 1920px;
-  padding-top: 219px;
-  padding-bottom: 121px;
+  padding-top: 220px;
+  padding-bottom: 354px;
+  background-color: var(--bg-color);
   background-image: linear-gradient(
       rgba(30, 33, 44, 0.6),
       rgba(30, 33, 44, 0.6)
@@ -144,5 +148,73 @@ button {
 }
 
 .hero-title {
-  color: #ffffff;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: calc(130 / 100);
+  letter-spacing: 0.01em;
+  color: var(--white);
+}
+
+.title-accent {
+  color: var(--accent-color);
+}
+
+.hero-text {
+  max-width: 595px;
+  margin-bottom: 61px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: calc(150 / 100);
+  color: var(--white);
+}
+
+.hero-link-btn {
+  display: inline-block;
+  min-width: 278px;
+  min-height: 52px;
+  padding: 15px 40px;
+  margin-right: 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  transition: background-color var(--transition-duration)
+      var(--transition-function),
+    border-color var(--transition-duration) var(--transition-function);
+}
+
+.hero-link-btn:is(:hover, :focus) {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.hero-btn {
+  display: inline-block;
+  min-width: 224px;
+  min-height: 52px;
+  padding: 15px 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  transition: background-color var(--transition-duration)
+      var(--transition-function),
+    border-color var(--transition-duration) var(--transition-function);
+}
+
+.hero-btn:is(:hover, :focus) {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
 }
